@@ -113,9 +113,9 @@ Restart apache:
 -  `sudo cat /var/log/apache2/error.log`
 
 # Third-party Resources
-- [LinxServerConfiguration]https://github.com/eakmotion/LinuxServerConfiguration)
-- [FlaskAppApache]http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)
-- [FireWallRule]https://cloud.google.com/compute/docs/vpc/firewalls)
+- [LinxServerConfiguration] https://github.com/eakmotion/LinuxServerConfiguration
+- [FlaskAppApache] http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/
+- [FireWallRule] https://cloud.google.com/compute/docs/vpc/firewalls
 
 
   
