@@ -57,9 +57,10 @@ URL site: <http://35.189.242.5/>
   `sudo ufw enable`
 
 ## Change timezone to UTC
-1. Configure the local timezone to UTC:  
+- Configure the local timezone to UTC:  
   `$ sudo dpkg-reconfigure tzdata`
-2. Select UTC
+- Select UTC
+
 
 ## Install and configure Apache to serve a Python mod_wsgi application
 
@@ -69,5 +70,52 @@ URL site: <http://35.189.242.5/>
   `$ sudo apt-get install python-setuptools libapache2-mod-wsgi`
 3. Restart Apache:  
   `$ sudo service apache2 restart`
-  
+
+
+## Install git
+ -`$ sudo apt-get install git`
+ - goto `cd /var/www/`
+ - clone project repo `sudo git clone https://github.com/bironader/Item-Catoluge.git `
+ 
+
 ## Install following nessary packages
+
+ ```
+  $ sudo apt-get install python-setuptools
+  $ sudo apt-get install python-psycopg2
+  $ sudo pip install Flask
+  $ sudo pip install oauth2client
+  $ sudo pip install requests
+  $ sudo pip install httplib2
+  $ sudo pip install sqlalchemy
+  $ sudo pip install facebook-sdk
+  ```
+Restart apache:  
+  `$ sudo service apache2 restart`
+  
+# Install  PostgreSQL
+
+- Install PostgreSQL database:   
+  `$ sudo apt-get install postgresql postgresql-contrib`
+  
+# Deploy application
+
+ - ` cd /var/www/Item-Catoluge` create .wsgi file `sudo nano flask.wsgi `
+ - create.conf file`$ sudo nano /etc/apache2/sites-available/flask.conf`
+ 
+ # Run application
+ 
+ - `sudo a2ensite flask.wsgi`
+ - `sudo service apache2 reload`
+ -  goto  <http://35.189.242.5/>
+ 
+## If erros occurred check logs file
+-  `sudo cat /var/log/apache2/error.log`
+
+# Third-party Resources
+- [LinxServerConfiguration]https://github.com/eakmotion/LinuxServerConfiguration)
+- [FlaskAppApache]http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)
+- [FireWallRule]https://cloud.google.com/compute/docs/vpc/firewalls)
+
+
+  
